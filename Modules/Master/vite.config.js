@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
     build: {
@@ -12,8 +12,8 @@ export default defineConfig({
             publicDirectory: '../../public',
             buildDirectory: 'build-master',
             input: [
-                __dirname + '/resources/assets/sass/app.scss',
-                __dirname + '/resources/assets/js/app.js'
+                // __dirname + '/resources/assets/sass/app.scss',
+                __dirname + '/resources/assets/js/app.tsx'
             ],
             refresh: true,
         }),
@@ -22,5 +22,5 @@ export default defineConfig({
 
 //export const paths = [
 //    'Modules/$STUDLY_NAME$/resources/assets/sass/app.scss',
-//    'Modules/$STUDLY_NAME$/resources/assets/js/app.js',
+//    'Modules/$STUDLY_NAME$/resources/assets/js/app.tsx',
 //];

@@ -25,5 +25,5 @@
     @yield('content')
 
     {{-- Vite JS --}}
-    {{-- {{ module_vite('build-master', 'resources/assets/js/app.js') }} --}}
+    {{-- {{ module_vite('build-master', 'resources/assets/js/app.tsx') }} --}}
 </body>
