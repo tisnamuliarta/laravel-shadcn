@@ -1,7 +1,3 @@
-import { useForm } from '@inertiajs/react';
-import classNames from 'classnames';
-import React, { useState } from 'react';
-import useRoute from '@/Hooks/useRoute';
 import ActionMessage from '@/Components/ActionMessage';
 import ActionSection from '@/Components/ActionSection';
 import Checkbox from '@/Components/Checkbox';
@@ -12,11 +8,14 @@ import FormSection from '@/Components/FormSection';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
 import SecondaryButton from '@/Components/SecondaryButton';
 import SectionBorder from '@/Components/SectionBorder';
-import { ApiToken } from '@/types';
+import TextInput from '@/Components/TextInput';
 import useTypedPage from '@/Hooks/useTypedPage';
+import { ApiToken } from '@/types';
+import { useForm } from '@inertiajs/react';
+import classNames from 'classnames';
+import React, { useState } from 'react';
 
 interface Props {
   tokens: ApiToken[];
@@ -29,7 +28,7 @@ export default function APITokenManager({
   availablePermissions,
   defaultPermissions,
 }: Props) {
-  const route = useRoute();
+
   const createApiTokenForm = useForm({
     name: '',
     permissions: defaultPermissions,

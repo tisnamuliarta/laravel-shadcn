@@ -1,16 +1,15 @@
-import { Link, useForm, Head } from '@inertiajs/react';
-import classNames from 'classnames';
-import React from 'react';
-import useRoute from '@/Hooks/useRoute';
 import AuthenticationCard from '@/Components/AuthenticationCard';
 import PrimaryButton from '@/Components/PrimaryButton';
+import { Head, Link, useForm } from '@inertiajs/react';
+import classNames from 'classnames';
+import React from 'react';
 
 interface Props {
   status: string;
 }
 
 export default function VerifyEmail({ status }: Props) {
-  const route = useRoute();
+
   const form = useForm({});
   const verificationLinkSent = status === 'verification-link-sent';
 

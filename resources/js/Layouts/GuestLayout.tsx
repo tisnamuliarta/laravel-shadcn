@@ -10,7 +10,6 @@ interface GuestLayoutProps {
 }
 
 export function GuestLayout({ description = null, header = null, children }: PropsWithChildren<GuestLayoutProps>) {
-  const route = useRoute()
   return (
     <div className='flex min-h-screen flex-col items-center pt-6 sm:justify-center sm:pt-0'>
       <Link href={route('dashboard')}>

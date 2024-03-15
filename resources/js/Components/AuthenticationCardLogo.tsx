@@ -1,11 +1,12 @@
+import { cn } from '@/lib/utils';
 import { Link } from '@inertiajs/react';
 import React from 'react';
 
-export default function AuthenticationCardLogo() {
+export default function AuthenticationCardLogo({ className }: { className?: string }) {
   return (
     <Link href="/">
       <svg
-        className="w-16 h-16"
+        className={cn(className, 'w-16 h-16')}
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

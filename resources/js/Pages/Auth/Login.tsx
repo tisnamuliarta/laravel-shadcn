@@ -4,7 +4,6 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import { Button } from '@/Components/ui/button';
 import { Input } from '@/Components/ui/input';
-import useRoute from '@/Hooks/useRoute';
 import { Head, Link, useForm } from '@inertiajs/react';
 import classNames from 'classnames';
 import React from 'react';
@@ -15,7 +14,7 @@ interface Props {
 }
 
 export default function Login({ canResetPassword, status }: Props) {
-  const route = useRoute();
+
   const form = useForm({
     email: '',
     password: '',

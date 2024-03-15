@@ -1,17 +1,16 @@
-import { router } from '@inertiajs/core';
-import { Link, useForm } from '@inertiajs/react';
-import classNames from 'classnames';
-import React, { useRef, useState } from 'react';
-import useRoute from '@/Hooks/useRoute';
 import ActionMessage from '@/Components/ActionMessage';
 import FormSection from '@/Components/FormSection';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
 import SecondaryButton from '@/Components/SecondaryButton';
-import { User } from '@/types';
+import TextInput from '@/Components/TextInput';
 import useTypedPage from '@/Hooks/useTypedPage';
+import { User } from '@/types';
+import { router } from '@inertiajs/core';
+import { Link, useForm } from '@inertiajs/react';
+import classNames from 'classnames';
+import React, { useRef, useState } from 'react';
 
 interface Props {
   user: User;
@@ -24,7 +23,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
     email: user.email,
     photo: null as File | null,
   });
-  const route = useRoute();
+
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const photoRef = useRef<HTMLInputElement>(null);
   const page = useTypedPage();
@@ -183,7 +182,7 @@ export default function UpdateProfileInformationForm({ user }: Props) {
         <InputError message={form.errors.email} className="mt-2" />
 
         {page.props.jetstream.hasEmailVerification &&
-        user.email_verified_at === null ? (
+          user.email_verified_at === null ? (
           <div>
             <p className="text-sm mt-2 dark:text-white">
               Your email address is unverified.

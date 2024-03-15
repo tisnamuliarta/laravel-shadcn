@@ -1,19 +1,18 @@
-import { useForm, Head } from '@inertiajs/react';
-import classNames from 'classnames';
-import React from 'react';
-import useRoute from '@/Hooks/useRoute';
 import AuthenticationCard from '@/Components/AuthenticationCard';
+import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
-import InputError from '@/Components/InputError';
+import { Input } from '@/Components/ui/input';
+import { Head, useForm } from '@inertiajs/react';
+import classNames from 'classnames';
+import React from 'react';
 
 interface Props {
   status: string;
 }
 
 export default function ForgotPassword({ status }: Props) {
-  const route = useRoute();
+
   const form = useForm({
     email: '',
   });
@@ -42,7 +41,7 @@ export default function ForgotPassword({ status }: Props) {
       <form onSubmit={onSubmit}>
         <div>
           <InputLabel htmlFor="email">Email</InputLabel>
-          <TextInput
+          <Input
             id="email"
             type="email"
             className="mt-1 block w-full"

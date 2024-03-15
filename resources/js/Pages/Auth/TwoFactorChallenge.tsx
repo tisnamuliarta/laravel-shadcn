@@ -1,15 +1,14 @@
-import { useForm, Head } from '@inertiajs/react';
-import classNames from 'classnames';
-import React, { useRef, useState } from 'react';
-import useRoute from '@/Hooks/useRoute';
 import AuthenticationCard from '@/Components/AuthenticationCard';
+import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
-import InputError from '@/Components/InputError';
+import { Head, useForm } from '@inertiajs/react';
+import classNames from 'classnames';
+import React, { useRef, useState } from 'react';
 
 export default function TwoFactorChallenge() {
-  const route = useRoute();
+
   const [recovery, setRecovery] = useState(false);
   const form = useForm({
     code: '',

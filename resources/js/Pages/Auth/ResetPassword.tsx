@@ -1,12 +1,11 @@
-import { useForm, Head } from '@inertiajs/react';
-import classNames from 'classnames';
-import React from 'react';
-import useRoute from '@/Hooks/useRoute';
 import AuthenticationCard from '@/Components/AuthenticationCard';
+import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
-import InputError from '@/Components/InputError';
+import { Head, useForm } from '@inertiajs/react';
+import classNames from 'classnames';
+import React from 'react';
 
 interface Props {
   token: string;
@@ -14,7 +13,7 @@ interface Props {
 }
 
 export default function ResetPassword({ token, email }: Props) {
-  const route = useRoute();
+
   const form = useForm({
     token,
     email,
